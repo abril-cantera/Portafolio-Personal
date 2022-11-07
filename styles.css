@@ -316,3 +316,74 @@ body {
   color: #25d366;
   cursor: pointer;
 }
+
+/**/
+@media (min-width: 320px) {
+  .header .headerNav {
+    flex-direction: column;
+    padding: 0;
+  }
+  .header .headerNav .containerTitlePrimary {
+    padding: 15px;
+  }
+  .containerNavegation {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .containerNavegation button {
+    padding-left: 0;
+  }
+  .containerPrincipalContact .contact {
+    flex-direction: row;
+    height: 100px;
+    width: 355px;
+    right: 20px;
+    top: 100px;
+  }
+  .section1Div1 h1 {
+    font-size: 3rem;
+  }
+  .section1Div1 h3 {
+    font-size: 2.5rem;
+    padding: 15px 0;
+  }
+  .section1Div1 {
+    padding: 10px;
+    padding-top: 205px;
+  }
+  .containerInfo {
+    flex-direction: column;
+    width: auto;
+  }
+  .containerInfo .infoImg {
+    height: 220px;
+  }
+  .containerInfo .infoImg .Img {
+    height: 100%;
+    width: 100%;
+    background-size: contain;
+  }
+  .containerInfo .infoContent h2 {
+    font-size: 1.6rem;
+  }
+  .containerInfo .infoContent p {
+    font-size: 1.4rem;
+  }
+
+  .Jobs .sectionJobs {
+    width: 100%;
+    height: 68vh;
+    justify-content: space-evenly;
+  }
+  .Jobs .sectionJobs .imgJobs {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .Jobs .sectionJobs .imgJobs .JobsImg {
+    height: auto;
+    width: 100%;
+  }
+}
