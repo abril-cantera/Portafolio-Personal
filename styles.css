@@ -1,0 +1,318 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: grey;
+}
+.inactive {
+  display: none;
+}
+.animacion {
+  animation: scale-in-ver-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@-webkit-keyframes scale-in-ver-center {
+  0% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-ver-center {
+  0% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.animacionEnter {
+  animation: scale-in-hor-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@-webkit-keyframes scale-in-hor-center {
+  0% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+@keyframes scale-in-hor-center {
+  0% {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+.animacionEnterContacts {
+  animation: scale-in-ver-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+@-webkit-keyframes scale-in-ver-top {
+  0% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+@keyframes scale-in-ver-top {
+  0% {
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+    opacity: 1;
+  }
+}
+
+/* HEADER */
+
+.header {
+  height: auto;
+  background: url("../img/fondoheader1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.header .headerNav {
+  background-color: white;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 300;
+  position: fixed;
+  width: 100%;
+  padding: 30px;
+}
+
+.header .headerNav .containerTitlePrimary a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+
+.containerNavegation button {
+  color: rgb(0, 0, 0);
+  padding-left: 20px;
+  font-size: 1.8rem;
+  text-decoration: none;
+  border: none;
+  background-color: white;
+  position: relative;
+}
+.containerNavegation button:hover {
+  cursor: pointer;
+}
+
+/**/
+.main {
+  height: 100vh;
+  width: 100vw;
+}
+.main .mainDiv1 {
+  background-image: url("./Img/Fondo-header.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.main .mainDiv1 .div1Section1 {
+  background-color: rgba(204, 143, 110, 0.456);
+  height: 100vh;
+}
+.section1Div1 {
+  padding: 25px;
+  padding-top: 100px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+/*TITLE*/
+.containetTitle {
+  color: white;
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
+}
+.section1Div1 h1 {
+  text-align: center;
+  font-size: 4rem;
+}
+.section1Div1 h3 {
+  text-align: center;
+  padding: 15px 30px;
+  font-size: 3rem;
+}
+
+/*INFO*/
+.containerInfo {
+  display: flex;
+  height: auto;
+  background: white;
+  border: 1px solid white;
+  border-radius: 15px;
+  width: 900px;
+}
+.containerInfo .infoImg {
+  width: 100%;
+}
+.containerInfo .infoImg .Img {
+  background-image: url("./Img/Acerca-de.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  height: 100%;
+}
+.containerInfo .infoContent {
+  padding: 25px 10px;
+  width: 100%;
+  text-align: center;
+}
+.containerInfo .infoContent h2 {
+  font-size: 3rem;
+  padding: 10px;
+}
+.containerInfo .infoContent p {
+  font-size: 2rem;
+}
+/*Trabajos*/
+.Jobs {
+  display: flex;
+}
+.Jobs .sectionJobs {
+  width: 75vw;
+  height: 80vh;
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+}
+.Jobs .sectionJobs .sectionTitleJobs h2 {
+  font-size: 2.8rem;
+}
+.Jobs .sectionJobs .imgJobs {
+  height: 70%;
+}
+.Jobs .sectionJobs .imgJobs .img-title {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+.Jobs .sectionJobs .imgJobs .img-title img {
+  height: 25px;
+  margin: 10px 15px;
+}
+.Jobs .sectionJobs .imgJobs .JobsImg {
+  height: 100%;
+}
+.Jobs .sectionJobs .contaiener-circle button {
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+}
+.Jobs .sectionJobs .contaiener-circle button:hover {
+  cursor: pointer;
+}
+
+/*CONTACTO*/
+.containerPrincipalContact .contact {
+  position: absolute;
+  background-color: white;
+  height: 570px;
+  width: 60px;
+  right: 28px;
+  top: 78px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.containerPrincipalContact .contact .icon i {
+  font-size: 3rem;
+}
+.containerPrincipalContact .contact a:hover {
+  transform: scale(1.2, 1.2);
+}
+
+.linkedIn {
+  color: black;
+}
+.instagram {
+  color: black;
+}
+.github {
+  color: black;
+}
+.whatsapp {
+  color: black;
+}
+
+.linkedIn:hover {
+  color: #0077b5;
+  cursor: pointer;
+}
+.instagram:hover {
+  color: rgb(197, 50, 148);
+  cursor: pointer;
+}
+.github:hover {
+  color: rgb(215, 215, 228);
+  cursor: pointer;
+}
+.whatsapp:hover {
+  color: #25d366;
+  cursor: pointer;
+}
