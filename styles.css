@@ -15,6 +15,9 @@ body {
 .inactive {
   display: none;
 }
+.active {
+  display: block;
+}
 .animacion {
   animation: scale-in-ver-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
@@ -71,37 +74,29 @@ body {
   }
 }
 .animacionEnterContacts {
-  animation: scale-in-ver-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
-@-webkit-keyframes scale-in-ver-top {
+@-webkit-keyframes slide-in-top {
   0% {
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
-    -webkit-transform-origin: 100% 0%;
-    transform-origin: 100% 0%;
-    opacity: 1;
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-    -webkit-transform-origin: 100% 0%;
-    transform-origin: 100% 0%;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
-@keyframes scale-in-ver-top {
+@keyframes slide-in-top {
   0% {
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
-    -webkit-transform-origin: 100% 0%;
-    transform-origin: 100% 0%;
-    opacity: 1;
+    -webkit-transform: translateY(-1000px);
+    transform: translateY(-1000px);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-    -webkit-transform-origin: 100% 0%;
-    transform-origin: 100% 0%;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
     opacity: 1;
   }
 }
@@ -124,11 +119,11 @@ body {
   font-weight: 300;
   position: fixed;
   width: 100%;
-  padding: 30px;
+  padding: 25px;
 }
 
 .header .headerNav .containerTitlePrimary a {
-  color: rgb(0, 0, 0);
+  color: black;
   text-decoration: none;
   font-size: 1.8rem;
 }
@@ -164,17 +159,18 @@ body {
   height: 100vh;
 }
 .section1Div1 {
-  padding: 25px;
-  padding-top: 100px;
+  padding-top: 115px;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
 }
 /*TITLE*/
 .containetTitle {
+  max-width: 90%;
+  padding-top: 150px;
   color: white;
   text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
 }
@@ -188,59 +184,72 @@ body {
   font-size: 3rem;
 }
 
-/*INFO*/
-.containerInfo {
+/*SOBRE MI*/
+.containerSobreMi {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.containerInfo {
+  background-color: white;
+  width: 80%;
   height: auto;
-  background: white;
-  border: 1px solid white;
+  max-height: 510px;
+  display: flex;
   border-radius: 15px;
-  width: 900px;
 }
 .containerInfo .infoImg {
-  width: 100%;
+  width: 90%;
+  padding: 10px;
 }
-.containerInfo .infoImg .Img {
-  background-image: url("./Img/Acerca-de.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.containerInfo .infoImg img {
   border-bottom-left-radius: 15px;
   border-top-left-radius: 15px;
   height: 100%;
+  width: 100%;
 }
 .containerInfo .infoContent {
-  padding: 25px 10px;
   width: 100%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 .containerInfo .infoContent h2 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   padding: 10px;
 }
 .containerInfo .infoContent p {
   font-size: 2rem;
+  padding: 0 10px 10px 0;
 }
+
 /*Trabajos*/
 .Jobs {
   display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 .Jobs .sectionJobs {
-  width: 75vw;
-  height: 80vh;
   background-color: white;
   border-radius: 15px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 25px;
+  padding: 25px 0;
+  width: 85%;
+  height: auto;
+  max-height: 530px;
 }
 .Jobs .sectionJobs .sectionTitleJobs h2 {
   font-size: 2.8rem;
 }
 .Jobs .sectionJobs .imgJobs {
-  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .Jobs .sectionJobs .imgJobs .img-title {
   text-align: center;
@@ -254,7 +263,7 @@ body {
   margin: 10px 15px;
 }
 .Jobs .sectionJobs .imgJobs .JobsImg {
-  height: 100%;
+  width: 70%;
 }
 .Jobs .sectionJobs .contaiener-circle button {
   height: 20px;
@@ -269,10 +278,10 @@ body {
 .containerPrincipalContact .contact {
   position: absolute;
   background-color: white;
-  height: 570px;
-  width: 60px;
-  right: 28px;
-  top: 78px;
+  height: 500px;
+  width: 70px;
+  right: 15px;
+  top: 60px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -318,72 +327,85 @@ body {
 }
 
 /**/
-@media (min-width: 320px) {
-  .header .headerNav {
-    flex-direction: column;
-    padding: 0;
+@media (max-width: 900px) {
+  .containerPrincipalContact .contact {
+    position: absolute;
+    background-color: white;
+    height: 60px;
+    width: 410px;
+    right: 0;
+    top: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
-  .header .headerNav .containerTitlePrimary {
-    padding: 15px;
+}
+
+@media (max-width: 675px) {
+  .containetTitle {
+    padding-top: 0;
   }
-  .containerNavegation {
-    padding: 15px 0;
+  .containerInfo .infoContent p {
+    font-size: 1.6rem;
+  }
+  .containerIconBurger {
+    display: block;
+  }
+  .containerIconBurger i {
+    font-size: 2rem;
+  }
+  .containerNavegationMobile {
+    position: absolute;
+    background-color: white;
+    height: 60px;
+    width: 60%;
+    min-width: 320px;
+    top: 70px;
+    right: 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+  }
+  .containerNavMobile {
     display: flex;
     justify-content: space-around;
-    width: 100%;
+    align-items: center;
+    height: 100%;
   }
-  .containerNavegation button {
-    padding-left: 0;
+  .containerNavegationMobile button {
+    border: none;
+    font-size: 1.8rem;
+    background-color: white;
   }
   .containerPrincipalContact .contact {
-    flex-direction: row;
-    height: 100px;
-    width: 355px;
-    right: 20px;
-    top: 100px;
+    min-width: 320px;
   }
-  .section1Div1 h1 {
-    font-size: 3rem;
-  }
-  .section1Div1 h3 {
-    font-size: 2.5rem;
-    padding: 15px 0;
+  .containerNavegation {
+    display: none;
   }
   .section1Div1 {
-    padding: 10px;
-    padding-top: 205px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 570px) {
+  .containerInfo .infoContent p {
+    font-size: 1.6rem;
+    padding: 0;
   }
   .containerInfo {
     flex-direction: column;
-    width: auto;
+    align-items: center;
   }
   .containerInfo .infoImg {
-    height: 220px;
+    width: 70%;
   }
-  .containerInfo .infoImg .Img {
-    height: 100%;
-    width: 100%;
-    background-size: contain;
+  .containerInfo .infoImg img {
+    border-radius: 15px;
   }
   .containerInfo .infoContent h2 {
-    font-size: 1.6rem;
-  }
-  .containerInfo .infoContent p {
-    font-size: 1.4rem;
-  }
-
-  .Jobs .sectionJobs {
-    width: 100%;
-    height: 68vh;
-    justify-content: space-evenly;
-  }
-  .Jobs .sectionJobs .imgJobs {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-  .Jobs .sectionJobs .imgJobs .JobsImg {
-    height: auto;
-    width: 100%;
+    font-size: 2.1rem;
   }
 }

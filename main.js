@@ -2,6 +2,13 @@ const inicio = document.getElementById('inicio');
 const sobreMi = document.getElementById('sobreMi');
 const trabajos = document.getElementById('trabajos');
 const contactos = document.getElementById('contactos');
+const iconMobile = document.getElementById('iconMobile');
+const containerNavegation = document.getElementById('containerNavegation');
+const inicioMobile = document.getElementById('inicioMobile');
+const sobreMiMobile = document.getElementById('sobreMiMobile');
+const trabajosMobile = document.getElementById('trabajosMobile');
+const contactosMobile = document.getElementById('contactosMobile');
+
 
 const containerInicio = document.getElementById('containerInicio');
 const containerSobreMi = document.getElementById('containerSobreMi');
@@ -21,6 +28,12 @@ inicio.addEventListener('click', openInicio);
 sobreMi.addEventListener('click', openSobreMi);
 trabajos.addEventListener('click', openTrabajos);
 contactos.addEventListener('click', openContacts);
+iconMobile.addEventListener('click', openMenuMobile);
+inicioMobile.addEventListener('click', openInicio);
+sobreMiMobile.addEventListener('click', openSobreMi);
+trabajosMobile.addEventListener('click', openTrabajos);
+contactosMobile.addEventListener('click', openContacts);
+iconMobileMobile.addEventListener('click', openMenuMobile);
 
 //BTN
 btn1.addEventListener('click', nextImg1);
@@ -54,6 +67,13 @@ function openTrabajos() {
 function openContacts() {
   containerContacts.classList.toggle('inactive');
   containerContacts.classList.add('animacionEnterContacts');
+  containerNavegation.classList.add('inactive');
+}
+
+function openMenuMobile() {
+  containerNavegation.classList.toggle('inactive');
+  containerNavegation.classList.add('animacionEnter');
+  containerContacts.classList.add('inactive');
 }
 
 //Function Btn
