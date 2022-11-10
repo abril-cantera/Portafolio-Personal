@@ -33,7 +33,7 @@ inicioMobile.addEventListener('click', openInicio);
 sobreMiMobile.addEventListener('click', openSobreMi);
 trabajosMobile.addEventListener('click', openTrabajos);
 contactosMobile.addEventListener('click', openContacts);
-iconMobileMobile.addEventListener('click', openMenuMobile);
+iconMobile.addEventListener('click', openMenuMobile);
 
 //BTN
 btn1.addEventListener('click', nextImg1);
